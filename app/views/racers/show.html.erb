@@ -1,0 +1,28 @@
+<h2>Kolarkie Bios</h2>
+
+
+<p>
+  <strong>Title:</strong>
+  <%= @racer.name %>
+</p>
+
+<p>
+  <strong>Charakterystyka:</strong>
+  <%= @racer.descrpt %>
+</p>
+
+<p>
+  <strong>Waga:</strong>
+  <% if @racer.weight < 80 %>
+  <%= @racer.weight %>
+  <% else %>
+  <%= "Wazysz #{@racer.weight}. Jak nie schudniesz wieprzku, to wypad" %>
+  <% end %>
+</p>
+
+<p>
+  <strong>Wzrost:</strong>
+  <%= @racer.height %>
+</p>
+
+<%= link_to 'Back', racers_path %>

@@ -1,0 +1,7 @@
+<h2>Lista Zawodnikow</h2>
+
+<ul>
+  <% @racers.each do |racer| %>
+  <li><%= link_to racer.name, racer_path(racer) %></li>
+  <% end %>
+</ul>
